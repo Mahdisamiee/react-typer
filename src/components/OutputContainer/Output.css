@@ -1,0 +1,20 @@
+.light-background {
+  background-color: bisque;
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: teal;
+}
+
+.winky-text {
+  animation: wink 1s infinite cubic-bezier(.85,.64,.85,1);
+}
+
+@keyframes wink {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
