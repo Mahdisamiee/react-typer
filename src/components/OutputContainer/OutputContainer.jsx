@@ -4,11 +4,11 @@ import Lighter from "../Lighter/Lighter";
 
 import "./Output.css";
 
-const OutputContainer = () => {
+const OutputContainer = ({ children = "Hello World!", time = 500, lighter = false }) => {
   return (
     <p className="light-background">
-      <TextShow text="mahdi samieenia is here! " time={200} />
-      <Lighter />
+      <TextShow text={children} time={time} />
+      {lighter && <Lighter />}
     </p>
   );
 };

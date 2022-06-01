@@ -8,14 +8,18 @@ const TextShow = ({ text, time }) => {
   }, [text]);
 
   useEffect(() => {
+    let count = 1;
+    let max = 0;
     let interval = setInterval(() => {
-      setShowTextLength((c) => c + 1);
+      max += count;
+      setShowTextLength(max);
+      if (max === text.length + 1 || max === 0) count = -count;
     }, time);
 
     return () => {
       clearInterval(interval);
     };
-  }, [time]);
+  }, [time, text]);
 
   return (
     <>
