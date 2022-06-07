@@ -5,9 +5,6 @@ const TextShow = ({ text, time }) => {
 
   useEffect(() => {
     setShowTextLength(0);
-  }, [text]);
-
-  useEffect(() => {
     let count = 1;
     let max = 0;
     let interval = setInterval(() => {
